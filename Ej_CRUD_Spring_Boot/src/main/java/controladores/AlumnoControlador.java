@@ -19,14 +19,14 @@ public class AlumnoControlador {
 	public RepoAlumno repo = new RepoAlumno("185.224.138.154", "u581554845_alumno", "Root1234", "u581554845_indra");
 
 	//Leer alumno
-	@GetMapping(path = "/detalle/{id}")
+	@GetMapping(path = "/detalle/{id}")		//localhost/alumnos/detalle/123 --> En el navegador
 	public ModelAndView detalle(@PathVariable("id")int matricula) throws Exception {
 
 		
-		Alumno modelo=repo.leer(matricula);				//localhost/alumnos/detalle/123 --> en el navegador
+		Alumno modelo=repo.leer(matricula);				
 		
 		ModelAndView mv=new ModelAndView("/DetalleVista");
-		mv.addObject("datos",modelo);
+		mv.addObject("modelo",modelo);
 		
 		return mv;
 	}
@@ -52,7 +52,7 @@ public class AlumnoControlador {
 
 		return mv;
 	}
-	@PostMapping(path="/nuevo")
+	@PostMapping(path="/nuevo")		//Lo que se devuelve de la página. Después de guardar.
 	public ModelAndView nuevo(Alumno modelo) throws Exception
 	{
 		ModelAndView mv = null;
@@ -67,7 +67,7 @@ public class AlumnoControlador {
 	
 	//Editar alumno
 	@GetMapping(path="/editar/{id}")
-	public ModelAndView editar(@PathVariable("id") int matricula) throws Exception	//Para acceder desde el listado
+	public ModelAndView editar(@PathVariable("id") int matricula) throws Exception
 	{
 		Alumno modelo = this.repo.leer(matricula);
 		ModelAndView mv = null;

@@ -5,16 +5,14 @@
 <html> 					
 	<head>
 		<meta charset="UTF-8">
-		<title>Detalle alumno</title>							<!--Para comentar en html-->
+		<title>Detalle alumno</title>						<!--Comentario en html-->
 	</head>
-	<body>		
-		<input type="number" value="${datos.matricula}"/>
-		<br>
-		
-		<input type = "text" value = "${datos.nombre}"/>
-		<br>
-		
-		<input type = "text" value = "${datos.apellido}"/>
-		<br>
+	<body>
+		<h2>Alumno ${modelo.matricula}</h2>
+			Nº de matrícula: <label>${modelo.matricula}</label> <br />
+			Nombre: <label>${modelo.nombre}</label> <br />
+			Apellido: <label>${modelo.apellido}</label> <br />
+			<p>			
+			<a href="/alumnos">Volver al listado</a>
 	</body>
 </html>

@@ -6,6 +6,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Listado de alumnos</title>
+		<!-- Estilo de la tabla: -->
+		<style>
+		table {
+			border-collapse: collapse;
+			width: 30%;
+			}
+		td, th {
+		  border: 1px solid;
+		  text-align: left;
+		  padding: 8px;
+		  }
+		</style>
 	</head>
 	<body>
 		<h2>Listado de alumnos</h2>
@@ -13,7 +25,7 @@
 			Nº de matrícula: <label>${item.matricula}</label> <br />
 			Nombre: <label>${item.nombre}</label> <br />
 			Apellido: <label>${item.apellido}</label> <br />
-			<hr />
+			<hr />		<!-- Línea horizontal -->
 		</c:forEach>
 		
 		<br>
@@ -22,9 +34,9 @@
 		<h2>Listado de alumnos</h2>
 		<table>
 			<tr>
-				<td>Nº de matrícula</td>
-				<td>Nombre</td>
-				<td>Apellido</td>
+				<th>Nº de matrícula</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
 			</tr>
 			<c:forEach var="item" items="${modelo}">
 				<tr>
@@ -36,6 +48,9 @@
 					</td>
 					<td>
 						<a href="/alumnos/editar/${item.matricula}">Editar</a>
+					</td>
+					<td>
+						<a href="/alumnos/detalle/${item.matricula}">Leer</a>
 					</td>
 				</tr>
 			</c:forEach>

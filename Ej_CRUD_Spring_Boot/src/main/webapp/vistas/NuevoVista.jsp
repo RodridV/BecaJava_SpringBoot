@@ -11,25 +11,26 @@
 				<label>Nº de matrícula</label>
 			</div>
 			<div>
-				<input type="text" name="matricula" value="${modelo.matricula}" />
+				<input type="text" name="Matrícula" value="${modelo.matricula}" />
 			</div>
 			<div>
 				<label>Nombre</label>
 			</div>
 			<div>
-				<input type="text" name="nombre" value="${modelo.nombre}" />
+				<input type="text" name="Nombre" value="${modelo.nombre}" />
 			</div>
 			<div>
 				<label>Apellido</label>
 			</div>
 			<div>
-				<input type="text" name="apellido" value="${modelo.apellido}" />
+				<input type="text" name="Apellido" value="${modelo.apellido}" />
 			</div>
+			<p>
 			<div>
 				<button>Guardar</button>
 			</div>			
 		</form>
-		
+		<p>
 		<a href="/alumnos">Volver al listado</a>
 	</body>
 </html>

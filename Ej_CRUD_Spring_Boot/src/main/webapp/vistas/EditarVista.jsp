@@ -3,12 +3,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>Editar alumno</title>
 	</head>
 	<body>
 		<form method="POST" action="/alumnos/editar">
 			<div>
-				<label>Matrícula</label>
+				<label>Nº de matrícula</label>
 			</div>
 			<div>
 				<input type="hidden" name="matricula_OLD" value="${modelo.matricula}" />
@@ -26,11 +26,12 @@
 			<div>
 				<input type="text" name="apellido" value="${modelo.apellido}" />
 			</div>
+			<p>
 			<div>
 				<button>Guardar</button>
 			</div>			
 		</form>
-		
+		<p>
 		<a href="/alumnos">Volver al listado</a>
 	</body>
 </html>
